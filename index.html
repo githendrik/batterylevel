@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supersexy Battery</title>
+
+    <script type="text/javascript" src="node_modules/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="dist/batterylevel.js"></script>
+
+    <style>
+        body {
+            background: linear-gradient(to right, rgba(175, 62, 77, 1), rgba(156, 145, 79, 1));
+            background-size: 1000%;
+            transition: background-position 2s;
+            background-position: 0;
+        }
+
+        #indicator {
+            background: linear-gradient(to right, white, black);
+            background-size: 1000%;
+            background-position: 0;
+            position: fixed;
+            top: 30%;
+            left: 0;
+            height: 30%;
+            z-index: -1;
+            transition: width 2s, background-position 2s;
+
+            width: 0;
+        }
+    </style>
+</head>
+<body id="container">
+
+<div id="percent"></div>
+<div id="remainingTime"></div>
+
+<div id="indicator"></div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "batteryLevel",
+  "version": "0.0.1",
+  "license": "none",
+  "private": true,
+  "devDependencies": {
+    "rollup": "0.41.4",
+    "eslint": "^3.13.0",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "dependencies": {
+    "moment": "2.17.1"
+  },
+  "scripts": {
+    "build": "npm run build:js",
+    "build:js": "npm run build:js:lint && npm run build:js:bundle",
+    "build:js:lint": "node_modules/eslint/bin/eslint.js js/",
+    "build:js:bundle": "rollup -c -n batteryLevel"
+  },
+  "config": {
+    "foo": "bar"
+  },
+  "description": "supersexy.design battery level indicator webapp",
+  "main": "index.html",
+  "author": "Hendrik Richert"
+}
