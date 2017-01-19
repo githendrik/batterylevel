@@ -12,17 +12,21 @@
     "eslint-plugin-react": "6.9.0",
     "rollup": "0.41.4",
     "rollup-plugin-babel": "^2.7.1",
-    "babel-preset-es2015-rollup": "^3.0.0"
+    "babel-preset-es2015-rollup": "^3.0.0",
+    "node-sass": "4.3.0",
+    "sass-lint": "1.10.2"
   },
   "dependencies": {
     "moment": "2.17.1"
   },
   "scripts": {
-    "build": "npm run build:js",
+    "build": "npm run build:sass && npm run build:js",
     "build:js": "npm run build:js:lint && npm run build:js:bundle",
     "build:js:lint": "node_modules/eslint/bin/eslint.js js/",
     "build:js:bundle": "rollup -c -n batteryLevel",
-    "postinstall": "npm run build"
+    "build:sass": "npm run build:sass:lint && npm run build:sass:css",
+    "build:sass:lint": "node_modules/.bin/sass-lint 'styles/*.scss' -v",
+    "build:sass:css": "node_modules/.bin/node-sass styles/batterylevel.scss dist/batterylevel.css"
   },
   "config": {
     "foo": "bar"

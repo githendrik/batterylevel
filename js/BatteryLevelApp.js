@@ -8,15 +8,17 @@ class BatteryLevelApp {
     constructor(document, navigator) {
         this.navigator = navigator;
 
-        navigator.getBattery().then((battery) => {
-            this.percentElement = document.querySelector('#percent');
-            this.timeElement = document.querySelector('#remainingTime');
-            this.containerElement = document.querySelector('#container');
-            this.indicatorElement = document.querySelector('#indicator');
+        if ('getBattery' in navigator) {
+            navigator.getBattery().then((battery) => {
+                this.percentElement = document.querySelector('.percent');
+                this.timeElement = document.querySelector('.remainingTime');
+                this.containerElement = document.querySelector('.container');
+                this.indicatorElement = document.querySelector('.indicator');
 
-            this.calculate(battery);
-            this.addEventListener(battery);
-        });
+                this.calculate(battery);
+                this.addEventListener(battery);
+            });
+        }
     }
 
     addEventListener(battery) {

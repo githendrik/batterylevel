@@ -1,0 +1,21 @@
+@import 'variables';
+
+.container {
+  background: linear-gradient(to right, $red, $green2);
+  background-position: 0;
+  background-size: 1000%;
+  transition: background-position 2s;
+}
+
+.indicator {
+  background: linear-gradient(to right, $green1, $black);
+  background-position: 0;
+  background-size: 1000%;
+  height: 30%;
+  left: 0;
+  position: fixed;
+  top: 30%;
+  transition: width 2s, background-position 2s;
+  width: 0;
+  z-index: -1;
+}

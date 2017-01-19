@@ -6,7 +6,6 @@ Simple project powering [supersexy.design](http://supersexy.design)
 
 * cleaner design
 * scss -> css
-* minify css/js
-* css sourcemaps
-* hosting
+* typo
+* flexbox for three row layout: %, bar, plug/time status
 * error handling (no getBattery() on navigator)
