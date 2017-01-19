@@ -4,11 +4,15 @@
   "license": "none",
   "private": true,
   "devDependencies": {
-    "rollup": "0.41.4",
     "eslint": "^3.13.0",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-config-airbnb-base": "^11.0.1",
-    "eslint-plugin-import": "^2.2.0"
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "3.0.2",
+    "eslint-plugin-react": "6.9.0",
+    "rollup": "0.41.4",
+    "rollup-plugin-babel": "^2.7.1",
+    "babel-preset-es2015-rollup": "^3.0.0"
   },
   "dependencies": {
     "moment": "2.17.1"
@@ -17,7 +21,8 @@
     "build": "npm run build:js",
     "build:js": "npm run build:js:lint && npm run build:js:bundle",
     "build:js:lint": "node_modules/eslint/bin/eslint.js js/",
-    "build:js:bundle": "rollup -c -n batteryLevel"
+    "build:js:bundle": "rollup -c -n batteryLevel",
+    "postinstall": "npm run build"
   },
   "config": {
     "foo": "bar"
