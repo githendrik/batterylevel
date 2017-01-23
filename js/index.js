@@ -1,4 +1,6 @@
 import BatteryLevelApp from './BatteryLevelApp';
 
 /* global window */
-new BatteryLevelApp(window.document, window.navigator);
+window.addEventListener('load', () => {
+    new BatteryLevelApp(window.document, window.navigator);
+});
