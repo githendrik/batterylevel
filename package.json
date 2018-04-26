@@ -17,7 +17,7 @@
     "sass-lint": "1.10.2"
   },
   "dependencies": {
-    "moment": "2.17.1"
+    "moment": "^2.22.1"
   },
   "scripts": {
     "build": "npm run build:sass && npm run build:js",
