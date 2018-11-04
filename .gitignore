@@ -1,3 +1,6 @@
 node_modules/
 .idea/
 dist/
+.DS_Store
+Batterylevel.sublime-project
+Batterylevel.sublime-workspace
